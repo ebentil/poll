@@ -1023,7 +1023,7 @@
 						$("#password-id").css('background', 'pink');
 						$("#cpassword-id").css('background', 'pink');
 					} else {
-						$.post('signin.php', {
+						$.post('http://78.46.254.56/poll/signin.php', {
 							name : name_id,
 							email : email_id,
 							phone : phone_id,
@@ -1054,7 +1054,7 @@
 					var key = 'signin';
 					var username_id = $("#lusername-id").val();
 					var password_id = $("#lpassword-id").val();
-					$.post('signin.php', {
+					$.post('http://78.46.254.56/poll/signin.php', {
 						username : username_id,
 						password : password_id,
 						key : key
