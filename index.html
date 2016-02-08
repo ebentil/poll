@@ -142,16 +142,16 @@
 
 						<div id="menu-container">
 
-							<div id="menu-1" class="homepage" style="background: #222222;opacity: .9; width: 50%;">
+							<div id="menu-1" class="homepage" style="background: #222222;opacity: .9; width: 100%;">
 								<div class="page-header">
 									<h2 class="page-title">Login</h2>
 								</div>
 								<!-- /.page-header -->
 								<div class="content-inner">
 									<div class="row">
-										<div class="col-md-12">
+										<div class="col-md-12 col-sm-12">
 											<div class="information">
-												<div class="col-md-12">
+												<div class="col-md-12 col-sm-12">
 													<label for="name-id">Username:</label>
 													<input class="form-control" name="lusername-id" type="text" id="lusername-id" maxlength="40" required="required">
 												</div>
@@ -162,9 +162,9 @@
 									</div>
 									<!-- /.row -->
 									<div class="row">
-										<div class="col-md-12">
+										<div class="col-md-12 col-sm-12">
 											<div class="information">
-												<div class="col-md-12">
+												<div class="col-md-12 col-sm-12">
 													<label for="email-id">Password:</label>
 													<input class="form-control" name="lpassword-id" type="password" id="lpassword-id" maxlength="40" required="required">
 												</div>
@@ -175,7 +175,7 @@
 									</div>
 									<!-- /.row -->
 									<div class="row contact-form">
-										<div class="col-md-12">
+										<div class="col-md-12 col-sm-12">
 											<input class="form-control" class="mainBtn" id="btnLogin" type="submit" name="" value="Log in">
 										</div>
 									</div>
@@ -192,30 +192,30 @@
 								<!-- /.page-header -->
 								<div class="content-inner">
 									<div class="row">
-										<div class="col-md-8">
+										<div class="col-md-8 col-sm-8">
 											<h3 class="widget-title">WHO ARE YOU</h3>
 											<div class="row contact-form">
-												<div class="col-md-4">
+												<div class="col-md-4 col-sm-4">
 													<label for="name-id">Your Name:</label>
 													<input class="form-control" name="name-id" type="text" id="name-id" maxlength="40">
 												</div>
-												<div class="col-md-4">
+												<div class="col-md-4 col-sm-4">
 													<label for="email-id">E-mail:</label>
 													<input class="form-control" name="email-id" type="text" id="email-id" maxlength="40">
 												</div>
-												<div class="col-md-4">
+												<div class="col-md-4 col-sm-4">
 													<label for="subject-id">Phone Number:</label>
 													<input class="form-control" name="phone-id" type="text" id="phone-id" maxlength="60">
 												</div>
-												<div class="col-md-4">
+												<div class="col-md-4 col-sm-4">
 													<label for="subject-id">Age:</label>
 													<input class="form-control" name="age-id" type="text" id="age-id" maxlength="60">
 												</div>
-												<div class="col-md-4">
+												<div class="col-md-4 col-sm-4">
 													<label for="subject-id">Nationality:</label>
 													<input class="form-control" name="sex-id" type="text" id="nationality-id" maxlength="60">
 												</div>
-												<div class="col-md-4">
+												<div class="col-md-4 col-sm-4">
 													<label for="subject-id">Locatioin:</label>
 													<input class="form-control" name="sex-id" type="text" id="location-id" maxlength="60">
 												</div>
@@ -224,18 +224,18 @@
 											<!-- /.contact-form -->
 										</div>
 										<!-- /.col-md-8 -->
-										<div class="col-md-4">
+										<div class="col-md-4 col-sm-4">
 											<div class="information">
 												<h3 class="widget-title">How do we identify you</h3>
-												<div class="col-md-12">
+												<div class="col-md-12 col-sm-4">
 													<label for="name-id">Username:</label>
 													<input class="form-control" name="username-id" type="text" id="username-id" maxlength="40">
 												</div>
-												<div class="col-md-12">
+												<div class="col-md-12 col-sm-4">
 													<label for="email-id">Password:</label>
 													<input class="form-control" name="password-id" type="text" id="password-id" maxlength="40">
 												</div>
-												<div class="col-md-12">
+												<div class="col-md-12 col-sm-4">
 													<label for="email-id">Confirm Password:</label>
 													<input class="form-control" name="cpassword-id" type="text" id="cpassword-id" maxlength="40">
 												</div>
@@ -1039,6 +1039,7 @@
 						}, function(data) {
 							if (data == 'done') {
 								alert("Thank you for joing our community of experts");
+								location.reload();
 							} else {
 								alert(data);
 							};
@@ -1063,6 +1064,9 @@
 						} else {
 							alert(data);
 						};
+						if (data == 'go') {
+							window.location = 'reply.php';
+						}
 					});
 
 				});

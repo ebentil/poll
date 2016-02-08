@@ -311,10 +311,10 @@
 														<div class="team-membe">
 															<div class="" style="border: 1px solid #a71e2b;background:#fafafa; border:1px solid #b9b9b9; padding: 10px;">
 																<span style="color:red; font-size:x-large; font-weight: bolder">*</span>
-																<input type="text" class="form-control answerMult1" style="height: 50px; background: #00FF99" placeholder="Answer 1"/>
+																<input type="text" class="form-control answer1" style="height: 50px; background: #00FF99" placeholder="Answer 1"/>
 																<br />
 																<span style="color:red; font-size:x-large; font-weight: bolder">*</span>
-																<input type="text" class="form-control answerMult2" style="height: 50px; background: #00FF99" placeholder="Answer 2"/>
+																<input type="text" class="form-control answer2" style="height: 50px; background: #00FF99" placeholder="Answer 2"/>
 																<br />
 																<input type="text" class="form-control" style="height: 50px" placeholder="Answer 3"/>
 																<br />
@@ -334,10 +334,10 @@
 														<div class="team-membe">
 															<div class="" style="border: 1px solid #a71e2b;background:#fafafa; border:1px solid #b9b9b9; padding: 10px;">
 																<span style="color:red; font-size:x-large; font-weight: bolder">*</span>
-																<input type="text" class="form-control answerExc1" style="height: 50px; background: #00FF99" placeholder="Answer 1" style="border: 1px solid green"/>
+																<input type="text" class="form-control answer1" style="height: 50px; background: #00FF99" placeholder="Answer 1" style="border: 1px solid green"/>
 																<br />
 																<span style="color:red; font-size:x-large; font-weight: bolder">*</span>
-																<input type="text" class="form-control answerExc2" style="height: 50px; background: #00FF99" placeholder="Answer 2" style="border: 1px solid green"/>
+																<input type="text" class="form-control answer2" style="height: 50px; background: #00FF99" placeholder="Answer 2" style="border: 1px solid green"/>
 																<br />
 																<input type="text" class="form-control" style="height: 50px" placeholder="Answer 3"/>
 																<br />
@@ -357,10 +357,10 @@
 														<div class="team-membe">
 															<div class="" style="border: 1px solid #a71e2b;background:#fafafa; border:1px solid #b9b9b9; padding: 10px;">
 																<span style="color:green; font-size:x-large; font-weight: bolder">*</span>
-																<input type="text" class="form-control answerYN1" style="height: 50px" placeholder="Yes" style="border: 1px solid green"/>
+																<input type="text" class="form-control answer1" style="height: 50px" placeholder="Yes" style="border: 1px solid green"/>
 																<br />
 																<span style="color:green; font-size:x-large; font-weight: bolder">*</span>
-																<input type="text" class="form-control answerYN2" style="height: 50px" placeholder="No" style="border: 1px solid green"/>
+																<input type="text" class="form-control answer2" style="height: 50px" placeholder="No" style="border: 1px solid green"/>
 															</div>
 														</div>
 													</div>
@@ -672,29 +672,11 @@
 						$("#question").css('border', '3px solid purple')
 					} else {
 						var answertype = $("#holding").val();
-
+						var answer1 = $(".answer1").val();
+						var answer2 = $(".answer2").val();
 						if (answertype == '') {
-							var answer1 = $(".answerMult1").val();
-							var answer2 = $(".answerMult2").val();
 							alert('Kindly select a type of answer');
 						} else {
-							if (answertype == 'ansMultipleChoice') {
-								var answer1 = $(".answerMult1").val();
-								var answer2 = $(".answerMult2").val();
-							}
-							if (answertype == 'ansMultipleChoice') {
-								var answer1 = $(".answerMult1").val();
-								var answer2 = $(".answerMult2").val();
-							}
-							if (answertype == 'ansExclusiveChoice') {
-								var answer1 = $(".answerExc1").val();
-								var answer2 = $(".answerExc2").val();
-							}
-							if (answertype == 'ansExclusiveChoice') {
-								var answer1 = $(".answerYN1").val();
-								var answer2 = $(".answerYN2").val();
-							}
-
 							if (answer1 == '' || answer2 == '') {
 								alert('Kindly enter a the possible answers')
 							} else {
@@ -724,6 +706,8 @@
 					$(".anserFields").slideUp();
 					$("." + showDiv).slideDown();
 					$("#holding").val(showDiv);
+					$(".answer1").val('');
+					$(".answer2").val('');
 				});
 			</script>
 			<script>
